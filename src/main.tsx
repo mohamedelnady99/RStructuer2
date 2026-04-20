@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import queryClient from "./Hooks/QueryClients.ts";
 import "react-toastify/dist/ReactToastify.css";
 import { QueryClientProvider } from "@tanstack/react-query";
+// const queryClient = new QueryClient();
 createRoot(document.getElementById("root")!).render(
   <ReduxProvider store={store}>
     <QueryClientProvider client={queryClient}>

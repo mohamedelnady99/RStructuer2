@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import AuthRedirect from "../utils/AuthRedirect";
 import Auth from "../Layouts/Auth/Index";
-import  authRoutes  from "../features/auth/routes";
+import authRoutes  from "../features/auth/routes";
 import Terms from "../features/InformationalPages/Terms";
 import Policy from "../features/InformationalPages/Policy";
 import NotFoundLayout from "../Layouts/NotFound";
@@ -19,12 +19,24 @@ const router = createBrowserRouter([
     ),
     children: [...authRoutes],
   },
+  //here example we can add all the routes that need authentication and authorization and wrap them with the AuthenticationRouter
+  //   {
+  //   path: "/dashboard",
+  //   element: (
+  //     <AuthenticationRouter>
+  //       <Dashboard /> this is just an example from features/dashboard/index.tsx you can replace it with your own component that will be the main layout for all the authenticated routes and then you can add the children routes that will be rendered inside the dashboard layout
+  //     </AuthenticationRouter>
+  //   ),
+  //   children: [
+  //     ...settingsRoutes,
+  //     ...mazadRoutes,
+  //     ...orderRoutes,
+  //     ...userRoutes,
+  //   ],
+  // },
   {
-    path: "/",
-    
-    element:(<AuthRedirect><Home /></AuthRedirect>),
-    
-    // children: [...appRoutes],
+    path: "/", 
+    element:<Home />,
   },
   {
     path: "/terms",
