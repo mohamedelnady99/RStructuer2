@@ -7,7 +7,7 @@ import Policy from "../features/InformationalPages/Policy";
 import NotFoundLayout from "../Layouts/NotFound";
 import NotFound from "../components/Shared/NotFound";
 import UnAuth from "../components/Shared/UnAuth";
-import Home from "@/features/InformationalPages/Home";
+import Home from "@/features/home/pages/Home";
 
 const router = createBrowserRouter([
   {
